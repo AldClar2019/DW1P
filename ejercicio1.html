@@ -26,6 +26,45 @@
         </section>
 
     </div>
+        <script>
+        function ej1() {
+            var nunero1 = parseInt(document.getElementById('uno').value);
+            var nunero2 = parseInt(document.getElementById('dos').value);
+            var nunero3 = parseInt(document.getElementById('tres').value);
+
+            if (isNaN(nunero1) || isNaN(nunero2) || isNaN(nunero3)) {
+                document.getElementById("n").innerHTML = '<span style="color:red">' + "No debe dejar los espacios vacíos." + '</span>';
+            } else {
+                if (nunero1 > nunero2) {
+                    if (nunero1 > nunero3) {
+                        if (nunero2 > nunero3) {
+                            document.getElementById("n").innerHTML = 'El numero menor es el ' + nunero3 + " y el mayor es el " + nunero1 + ".";
+                        } else {
+
+                            document.getElementById("n").innerHTML = 'El numero menor es el ' + nunero1 + " y el mayor es el " + nunero2 + ".";
+                        }
+                    } else {
+
+                        document.getElementById("n").innerHTML = 'El numero menor es el ' + nunero2 + " y el mayor es el " + nunero3 + ".";
+                    }
+                } else {
+                    if (nunero2 > nunero3) {
+                        if (nunero1 > nunero3) {
+
+                            document.getElementById("n").innerHTML = 'El numero menor es el ' + nunero3 + " y el mayor es el " + nunero1 + ".";
+                        } else {
+
+                            document.getElementById("n").innerHTML = 'El numero menor es el ' + nunero1 + " y el mayor es el " + nunero2 + ".";
+                        }
+                    } else {
+
+                        document.getElementById("n").innerHTML = 'El numero menor es el ' + nunero1 + " y el mayor es el " + nunero3 + ".";
+                    }
+                }
+            }
+
+        }
+    </script>
 </body>
 
 </html>
